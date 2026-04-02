@@ -122,7 +122,6 @@ export default function App() {
   const supportTeam = [
     { name: "Suellen", role: "Financeiro", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-23-at-13.33.18.jpeg" },
     { name: "Beatriz", role: "Marketing", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-23-at-13.32.11.jpeg" },
-    { name: "Evelyn", role: "Concierge", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-23-at-13.31.54.jpeg" },
     { name: "Marília", role: "Agendamento", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-19-at-09.06.20.jpeg" },
     { name: "Tuany", role: "Comercial", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/IMG_0206-scaled.jpg" }
   ];
@@ -145,17 +144,17 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass py-2 shadow-sm' : 'bg-transparent py-4'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass py-2 shadow-md' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           {/* Logo Left */}
           <div className="flex-shrink-0">
             <a href="#home">
-              <img src={LOGO_URL} alt="Odonto Poleza" className={`transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`} referrerPolicy="no-referrer" decoding="async" />
+              <img src={LOGO_URL} alt="Odonto Poleza" className={`transition-all duration-300 ${isScrolled ? 'h-10 md:h-12' : 'h-14 md:h-20'}`} referrerPolicy="no-referrer" decoding="async" />
             </a>
           </div>
 
           {/* Menu Center */}
-          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium">
+          <nav className="hidden xl:flex items-center space-x-6 text-[13px] font-bold uppercase tracking-wider">
             <a href="#home" className="hover:text-accent transition-colors">Início</a>
             <a href="#about" className="hover:text-accent transition-colors">Quem Somos</a>
             <a href="#services" className="hover:text-accent transition-colors">Serviços</a>
@@ -163,20 +162,23 @@ export default function App() {
             <a href="#contact" className="hover:text-accent transition-colors">Contato</a>
           </nav>
 
-          {/* Phone Center */}
-          <div className={`flex items-center space-x-2 font-semibold transition-colors duration-300 ${isScrolled ? 'text-accent' : 'text-white'}`}>
-            <Phone size={18} />
-            <a href="tel:+5547996250248" className="hover:underline text-sm md:text-base">(47) 99625-0248</a>
-          </div>
-
-          {/* Social + CTA Right */}
+          {/* Right Side Info */}
           <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4">
-              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-accent transition-colors"><Instagram size={20} /></a>
-              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-accent transition-colors"><Facebook size={20} /></a>
+            {/* Phone */}
+            <div className={`flex items-center space-x-2 font-bold transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-gray-800'}`}>
+              <Phone size={16} className="text-accent" />
+              <a href="tel:+5547996250248" className="hover:text-accent transition-colors text-sm md:text-base">(47) 99625-0248</a>
             </div>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-accent/20 whitespace-nowrap flex items-center">
-              <img src={WHATSAPP_ICON_URL} alt="WhatsApp" className="w-5 h-5 mr-2" referrerPolicy="no-referrer" />
+
+            {/* Social */}
+            <div className="flex items-center space-x-3">
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-accent transition-colors"><Instagram size={18} /></a>
+              <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-accent transition-colors"><Facebook size={18} /></a>
+            </div>
+
+            {/* CTA */}
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent/80 hover:bg-accent text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-accent/10 whitespace-nowrap flex items-center">
+              <img src={WHATSAPP_ICON_URL} alt="WhatsApp" className="w-4 h-4 mr-2" referrerPolicy="no-referrer" />
               Fale Conosco
             </a>
           </div>
@@ -217,91 +219,99 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-20 md:pt-40 pb-12 md:pb-24 overflow-hidden">
-        {/* Desktop Background */}
-        <div className="hidden md:block absolute inset-0 -z-20">
-          <img 
-            src="https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza.png" 
-            alt="Background" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
+      <section id="home" className="relative pt-24 lg:pt-40 pb-16 lg:pb-32 overflow-hidden bg-white lg:bg-[url('https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza.png')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
+        {/* Abstract Background Shapes - Hidden on desktop as we have a full BG */}
+        <div className="absolute top-0 right-0 -z-10 w-[60%] h-full bg-accent/5 rounded-bl-[300px] hidden lg:hidden transform translate-x-20" />
+        <div className="absolute top-[20%] right-[10%] -z-10 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] hidden lg:hidden" />
+        <div className="absolute -left-20 top-1/4 -z-10 w-96 h-96 bg-accent/5 rounded-full blur-[100px] hidden lg:hidden" />
         
-        {/* Mobile Image */}
-        <div className="md:hidden w-full mb-12 mt-4">
-          <img 
-            src="https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza-mobile2.png" 
-            alt="Hero Mobile" 
-            className="w-full h-auto"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-
-        <div className="hidden md:block absolute top-0 right-0 -z-10 w-1/2 h-full bg-accent/5 rounded-bl-[100px]" />
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl">
-            <motion.span 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="inline-block text-accent font-bold tracking-wider uppercase text-xs mb-4"
-            >
-              Odontologia de Elite em Balneário Piçarras
-            </motion.span>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-7xl font-bold text-gray-900 leading-tight mb-6"
-            >
-              Odonto <span className="text-accent">Poleza</span>: Excelência e Tradição.
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed"
-            >
-              Há 29 anos unindo tecnologia e atendimento humanizado <br /> para transformar sorrisos e vidas.
-            </motion.p>
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Left Content */}
+            <div className="flex-[1.2] text-center lg:text-left">
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="inline-block text-accent font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4 lg:mb-6"
+              >
+                Odontologia de Elite em Balneário Piçarras
+              </motion.span>
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-4xl md:text-6xl lg:text-[72px] font-bold text-gray-900 leading-[1.1] mb-6 lg:mb-8"
+              >
+                Odonto <span className="text-accent">Poleza</span>: <br /> Excelência e <br /> Tradição.
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-base md:text-xl text-gray-600 mb-8 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              >
+                Há 29 anos unindo tecnologia e atendimento humanizado para transformar sorrisos e vidas.
+              </motion.p>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-10 lg:mb-12"
+              >
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent/80 hover:bg-accent text-white px-8 py-4 lg:py-5 rounded-2xl text-base lg:text-lg font-bold transition-all shadow-2xl shadow-accent/20 flex items-center group whitespace-nowrap">
+                  <img src={WHATSAPP_ICON_URL} alt="WhatsApp" className="w-6 h-6 mr-3" referrerPolicy="no-referrer" />
+                  Agende sua Avaliação
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="flex flex-wrap justify-center lg:justify-start gap-6 lg:gap-8 pt-2 lg:pt-4"
+              >
+                <div className="flex items-center space-x-3 lg:space-x-4">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <Clock size={20} className="lg:w-6 lg:h-6" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[9px] lg:text-[10px] text-gray-400 uppercase font-bold tracking-widest">Horários</p>
+                    <p className="text-xs lg:text-sm font-bold text-gray-800">Seg - Sex: 08h às 18h</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3 lg:space-x-4">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <Award size={20} className="lg:w-6 lg:h-6" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[9px] lg:text-[10px] text-gray-400 uppercase font-bold tracking-widest">Tradição</p>
+                    <p className="text-xs lg:text-sm font-bold text-gray-800">+ 29 Anos de Experiência</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Content - Image (Hidden on desktop as it's part of the full BG) */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex-1 relative w-full mb-4 lg:hidden"
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent-hover text-white px-5 md:px-8 py-3 md:py-4 rounded-full text-sm md:text-lg font-bold transition-all shadow-xl shadow-accent/25 flex items-center group whitespace-nowrap">
-                <img src={WHATSAPP_ICON_URL} alt="WhatsApp" className="w-6 h-6 mr-2" referrerPolicy="no-referrer" />
-                Agende sua Avaliação
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-wrap gap-8 pt-4"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                  <Clock size={20} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 uppercase font-bold tracking-tight">Horários</p>
-                  <p className="text-sm font-semibold">Seg - Sex: 08h às 18h</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                  <Award size={20} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 uppercase font-bold tracking-tight">Tradição</p>
-                  <p className="text-sm font-semibold">+ 29 Anos de Experiência</p>
-                </div>
+              <div className="relative z-10 rounded-[24px] md:rounded-[60px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] border-4 md:border-[12px] border-white max-w-[550px] mx-auto">
+                <img 
+                  src="https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza-mobile2.png" 
+                  alt="Clínica Odonto Poleza" 
+                  className="w-full h-auto object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
             </motion.div>
+
+            {/* Desktop Spacer - Ensures text stays on the left when BG is active */}
+            <div className="hidden lg:block flex-1" />
           </div>
         </div>
       </section>
@@ -309,7 +319,7 @@ export default function App() {
       {/* Benefits Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-3xl md:text-5xl font-bold mb-3">Por que a Odonto Poleza?</h2>
             <p className="text-gray-600">Diferenciais que nos tornam referência em odontologia estética e funcional em Balneário Piçarras.</p>
           </div>
@@ -319,7 +329,7 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {[
               { icon: <ShieldCheck size={32} />, title: "Segurança Total", desc: "Protocolos rigorosos de biossegurança e esterilização para sua tranquilidade." },
@@ -343,17 +353,17 @@ export default function App() {
       {/* Who We Are */}
       <section id="about" className="py-16 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="flex-1"
+              className="flex-1 text-center lg:text-left"
             >
-              <span className="text-accent font-bold tracking-wider uppercase text-xs mb-3 block">Nossa História</span>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Odonto Poleza</h2>
-              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <span className="text-accent font-bold tracking-wider uppercase text-xs mb-2 block">Nossa História</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Odonto Poleza</h2>
+              <div className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto lg:mx-0">
                 <p>
                   Há 29 anos, a Clínica Odonto Poleza é referência em odontologia em Balneário Piçarras, unindo tradição, tecnologia e atendimento humanizado. Com uma equipe altamente qualificada e estrutura moderna, a clínica se destaca por oferecer tratamentos completos e personalizados, sempre com foco na excelência estética e funcional do sorriso.
                 </p>
@@ -416,7 +426,7 @@ export default function App() {
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-3xl md:text-5xl font-bold mb-3">Nossos Serviços</h2>
             <p className="text-gray-600">Soluções completas para a sua saúde bucal e estética facial com tecnologia de ponta.</p>
           </div>
@@ -521,7 +531,7 @@ export default function App() {
       <section id="team" className="relative pb-16 bg-accent/5 overflow-hidden">
         <div className="h-32 bg-white" />
         <div className="container mx-auto px-4 md:px-6 -mt-32 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-accent font-bold tracking-wider uppercase text-xs mb-3 block">Nossos Especialistas</span>
             <h2 className="text-3xl md:text-5xl font-bold mb-3">Corpo Clínico</h2>
             <p className="text-gray-600">Profissionais altamente qualificados e em constante atualização para oferecer o melhor da odontologia moderna.</p>
@@ -532,19 +542,19 @@ export default function App() {
             <h3 className="hidden md:block text-2xl font-bold mb-8 text-center text-gray-800">Doutores</h3>
             <div className="flex relative -mx-4 md:-mx-6">
               <motion.div 
-                className="flex space-x-8 px-4 md:px-6"
+                className="flex space-x-4 md:space-x-8 px-4 md:px-6"
                 style={{ willChange: 'transform' }}
-                animate={{ x: [0, window.innerWidth < 768 ? -1032 : -2292] }} 
+                animate={{ x: [0, -1500] }} 
                 transition={{ 
                   repeat: Infinity, 
-                  duration: 45, 
+                  duration: 35, 
                   ease: "linear" 
                 }}
               >
-                {[...doctors, ...doctors].map((member, index) => (
+                {[...doctors, ...doctors, ...doctors].map((member, index) => (
                   <div 
                     key={index}
-                    className="w-[140px] md:w-[350px] bg-white rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl flex-shrink-0 border border-gray-100"
+                    className="w-[160px] md:w-[300px] lg:w-[350px] bg-white rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl flex-shrink-0 border border-gray-100"
                   >
                     <div className="aspect-[4/5] overflow-hidden">
                       <img 
@@ -570,19 +580,19 @@ export default function App() {
             <h3 className="hidden md:block text-2xl font-bold mb-8 text-center text-gray-800">Equipe Auxiliar</h3>
             <div className="flex relative -mx-4 md:-mx-6">
               <motion.div 
-                className="flex space-x-8 px-4 md:px-6"
+                className="flex space-x-4 md:space-x-8 px-4 md:px-6"
                 style={{ willChange: 'transform' }}
-                animate={{ x: [window.innerWidth < 768 ? -860 : -1910, 0] }} 
+                animate={{ x: [-1500, 0] }} 
                 transition={{ 
                   repeat: Infinity, 
-                  duration: 40, 
+                  duration: 35, 
                   ease: "linear" 
                 }}
               >
-                {[...supportTeam, ...supportTeam].map((member, index) => (
+                {[...supportTeam, ...supportTeam, ...supportTeam].map((member, index) => (
                   <div 
                     key={index}
-                    className="w-[140px] md:w-[350px] bg-white rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl flex-shrink-0 border border-gray-100"
+                    className="w-[160px] md:w-[300px] lg:w-[350px] bg-white rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl flex-shrink-0 border border-gray-100"
                   >
                     <div className="aspect-[4/5] overflow-hidden">
                       <img 
@@ -615,9 +625,9 @@ export default function App() {
             viewport={{ once: true }}
             className="bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row"
           >
-            <div className="p-8 md:p-12 lg:p-20 flex-1">
-              <h2 className="text-2xl md:text-5xl font-bold mb-6 uppercase tracking-tight">Entre em Contato</h2>
-              <div className="space-y-4 md:space-y-6 mb-10">
+            <div className="p-8 md:p-12 lg:p-16 flex-1">
+              <h2 className="text-2xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Entre em Contato</h2>
+              <div className="space-y-4 md:space-y-5 mb-8">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                     <MapPin size={20} className="md:w-6 md:h-6" />
