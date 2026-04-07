@@ -91,7 +91,6 @@ export default function App() {
     { icon: <ToothIcon size={28} />, title: "Lentes de Contato", desc: "Transformação estética completa com lâminas ultrafinas de porcelana." },
     { icon: <ToothIcon size={28} />, title: "Clínica Geral", desc: "Prevenção e cuidados essenciais para manter seu sorriso sempre saudável." },
     { icon: <ToothIcon size={28} />, title: "Prótese Dentária", desc: "Reabilitação oral com próteses fixas ou removíveis de alta durabilidade." },
-    { icon: <ToothIcon size={28} />, title: "Odontopediatria", desc: "Cuidado especializado e lúdico para a saúde bucal dos pequenos." },
     { icon: <ToothIcon size={28} />, title: "Endodontia", desc: "Tratamento de canal com tecnologia rotatória para maior conforto." },
     { icon: <ToothIcon size={28} />, title: "Harmonização Facial", desc: "Procedimentos estéticos para equilibrar a beleza do seu rosto e sorriso." },
     { icon: <ToothIcon size={28} />, title: "Odontologia Digital", desc: "Escaneamento intraoral 3D para diagnósticos e planejamentos precisos." },
@@ -250,7 +249,7 @@ export default function App() {
                 transition={{ delay: 0.2 }}
                 className="text-base md:text-xl text-gray-600 mb-8 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
               >
-                Há 29 anos unindo tecnologia e atendimento humanizado para transformar sorrisos e vidas.
+                Há 30 anos unindo tecnologia e atendimento humanizado para transformar sorrisos e vidas.
               </motion.p>
               
               <motion.div 
@@ -287,7 +286,7 @@ export default function App() {
                   </div>
                   <div className="text-left">
                     <p className="text-[9px] lg:text-[10px] text-gray-400 uppercase font-bold tracking-widest">Tradição</p>
-                    <p className="text-xs lg:text-sm font-bold text-gray-800">+ 29 Anos de Experiência</p>
+                    <p className="text-xs lg:text-sm font-bold text-gray-800">+ 30 Anos de Experiência</p>
                   </div>
                 </div>
               </motion.div>
@@ -365,7 +364,7 @@ export default function App() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Odonto Poleza</h2>
               <div className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto lg:mx-0">
                 <p>
-                  Há 29 anos, a Clínica Odonto Poleza é referência em odontologia em Balneário Piçarras, unindo tradição, tecnologia e atendimento humanizado. Com uma equipe altamente qualificada e estrutura moderna, a clínica se destaca por oferecer tratamentos completos e personalizados, sempre com foco na excelência estética e funcional do sorriso.
+                  Há 30 anos, a Clínica Odonto Poleza é referência em odontologia em Balneário Piçarras, unindo tradição, tecnologia e atendimento humanizado. Com uma equipe altamente qualificada e estrutura moderna, a clínica se destaca por oferecer tratamentos completos e personalizados, sempre com foco na excelência estética e funcional do sorriso.
                 </p>
                 <p>
                   Essa trajetória sólida é resultado do compromisso contínuo com a saúde bucal e a satisfação dos pacientes, que confiam na Odonto Poleza como sinônimo de qualidade e credibilidade.
@@ -390,7 +389,7 @@ export default function App() {
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl hidden md:block">
-                <p className="text-4xl font-bold text-accent">+ 29</p>
+                <p className="text-4xl font-bold text-accent">+ 30</p>
                 <p className="text-sm text-gray-500 font-medium">Anos de Experiência</p>
               </div>
             </motion.div>
@@ -436,13 +435,13 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="flex flex-wrap justify-center gap-6"
           >
             {services.map((service, index) => (
               <motion.div 
                 key={index}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-2xl card-hover border border-gray-100 group"
+                className="bg-white p-8 rounded-2xl card-hover border border-gray-100 group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
               >
                 <div className="w-14 h-14 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                   {service.icon}
