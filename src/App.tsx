@@ -120,7 +120,6 @@ export default function App() {
 
   const supportTeam = [
     { name: "Suellen", role: "Financeiro", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-23-at-13.33.18.jpeg" },
-    { name: "Beatriz", role: "Marketing", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-23-at-13.32.11.jpeg" },
     { name: "Marília", role: "Agendamento", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-19-at-09.06.20.jpeg" },
     { name: "Tuany", role: "Comercial", img: "https://cienciaweb.com.br/wp-content/uploads/2026/04/IMG_0206-scaled.jpg" }
   ];
@@ -218,7 +217,7 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-24 lg:pt-40 pb-16 lg:pb-32 overflow-hidden bg-white lg:bg-[url('https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza.png')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
+      <section id="home" className="relative pt-24 lg:pt-40 pb-16 lg:pb-32 overflow-hidden bg-white lg:bg-[url('https://cienciaweb.com.br/wp-content/uploads/2026/05/bg_odontopoleza2.png')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
         {/* Abstract Background Shapes - Hidden on desktop as we have a full BG */}
         <div className="absolute top-0 right-0 -z-10 w-[60%] h-full bg-accent/5 rounded-bl-[300px] hidden lg:hidden transform translate-x-20" />
         <div className="absolute top-[20%] right-[10%] -z-10 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] hidden lg:hidden" />
@@ -299,9 +298,9 @@ export default function App() {
               transition={{ duration: 0.8 }}
               className="flex-1 relative w-full mb-4 lg:hidden"
             >
-              <div className="relative z-10 rounded-[24px] md:rounded-[60px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] border-4 md:border-[12px] border-white max-w-[550px] mx-auto">
+              <div className="relative z-10 overflow-hidden max-w-[550px] mx-auto">
                 <img 
-                  src="https://cienciaweb.com.br/wp-content/uploads/2026/04/bg_odontopoleza-mobile2.png" 
+                  src="https://cienciaweb.com.br/wp-content/uploads/2026/05/foto-mobile.png" 
                   alt="Clínica Odonto Poleza" 
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
