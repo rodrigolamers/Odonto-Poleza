@@ -67,7 +67,7 @@ const staggerContainer = {
   viewport: { once: true }
 };
 
-const WHATSAPP_LINK = "https://wa.me/554799420858?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20receber%20atendimento";
+const WHATSAPP_LINK = "https://wa.me/554796250248?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20receber%20atendimento";
 const INSTAGRAM_LINK = "https://www.instagram.com/odontopoleza/";
 const FACEBOOK_LINK = "https://www.facebook.com/odontopoleza/";
 const LOGO_URL = "https://cienciaweb.com.br/wp-content/uploads/2026/04/IMG_0207.png";
@@ -165,7 +165,7 @@ export default function App() {
             {/* Phone */}
             <div className={`flex items-center space-x-2 font-bold transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-gray-800'}`}>
               <Phone size={16} className="text-accent" />
-              <a href="tel:+554799420858" className="hover:text-accent transition-colors text-sm md:text-base">(47) 9942-0858</a>
+              <a href="tel:+554796250248" className="hover:text-accent transition-colors text-sm md:text-base">(47) 9625-0248</a>
             </div>
 
             {/* Social */}
