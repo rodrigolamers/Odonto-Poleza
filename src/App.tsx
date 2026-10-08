@@ -67,7 +67,7 @@ const staggerContainer = {
   viewport: { once: true }
 };
 
-const WHATSAPP_LINK = "https://wa.me/554796250248?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20receber%20atendimento";
+const WHATSAPP_LINK = "https://wa.me/5547996753978?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o!";
 const INSTAGRAM_LINK = "https://www.instagram.com/odontopoleza/";
 const FACEBOOK_LINK = "https://www.facebook.com/odontopoleza/";
 const LOGO_URL = "https://cienciaweb.com.br/wp-content/uploads/2026/04/IMG_0207.png";
@@ -165,7 +165,7 @@ export default function App() {
             {/* Phone */}
             <div className={`flex items-center space-x-2 font-bold transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-gray-800'}`}>
               <Phone size={16} className="text-accent" />
-              <a href="tel:+554796250248" className="hover:text-accent transition-colors text-sm md:text-base">(47) 9625-0248</a>
+              <a href="tel:+5547996753978" className="hover:text-accent transition-colors text-sm md:text-base">(47) 99675-3978</a>
             </div>
 
             {/* Social */}
@@ -641,7 +641,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-widest">Telefone / WhatsApp</p>
-                    <p className="text-sm md:text-gray-700 font-medium">(47) 99625-0248</p>
+                    <p className="text-sm md:text-gray-700 font-medium">(47) 99675-3978</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -726,7 +726,7 @@ export default function App() {
                 <h4 className="font-bold mb-2">Precisa de Ajuda?</h4>
                 <a href={WHATSAPP_LINK} className="text-accent font-bold flex items-center hover:underline">
                   <img src={WHATSAPP_ICON_URL} alt="WhatsApp" className="w-5 h-5 mr-2" referrerPolicy="no-referrer" />
-                  (47) 99625-0248
+                  (47) 99675-3978
                 </a>
               </div>
             </div>
